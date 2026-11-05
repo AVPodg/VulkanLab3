@@ -1,0 +1,19 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {"name": "msvc-debug", "displayName": "Windows / Visual Studio 2022 / Debug", "generator": "Visual Studio 17 2022", "architecture": "x64", "binaryDir": "${sourceDir}/build-msvc"},
+    {"name": "msvc-release", "inherits": "msvc-debug"},
+    {"name": "mingw-debug", "generator": "MinGW Makefiles", "binaryDir": "${sourceDir}/build-mingw-debug", "cacheVariables": {"CMAKE_BUILD_TYPE": "Debug"}},
+    {"name": "mingw-release", "inherits": "mingw-debug", "binaryDir": "${sourceDir}/build-mingw-release", "cacheVariables": {"CMAKE_BUILD_TYPE": "Release"}},
+    {"name": "debug", "generator": "Ninja", "binaryDir": "${sourceDir}/build-debug", "cacheVariables": {"CMAKE_BUILD_TYPE": "Debug"}},
+    {"name": "release", "inherits": "debug", "binaryDir": "${sourceDir}/build-release", "cacheVariables": {"CMAKE_BUILD_TYPE": "Release"}}
+  ],
+  "buildPresets": [
+    {"name": "msvc-debug", "configurePreset": "msvc-debug", "configuration": "Debug"},
+    {"name": "msvc-release", "configurePreset": "msvc-release", "configuration": "Release"},
+    {"name": "mingw-debug", "configurePreset": "mingw-debug"},
+    {"name": "mingw-release", "configurePreset": "mingw-release"},
+    {"name": "debug", "configurePreset": "debug"},
+    {"name": "release", "configurePreset": "release"}
+  ]
+}

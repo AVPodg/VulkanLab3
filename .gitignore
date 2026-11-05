@@ -1,0 +1,54 @@
+# Generated build files and downloaded dependencies
+/build*/
+/cmake-build*/
+/CMakeFiles/
+/CMakeCache.txt
+/cmake_install.cmake
+/install_manifest.txt
+/_deps/
+/bin/
+/dist/
+/output/
+/.tools/
+
+# Compiled shaders, executables, libraries and debug files
+*.spv
+*.exe
+*.dll
+*.lib
+*.a
+*.obj
+*.o
+*.pdb
+*.ilk
+*.exp
+
+# Temporary files and local settings
+/tmp/
+*.log
+*.tmp
+*.bak
+*.swp
+__pycache__/
+*.pyc
+imgui.ini
+CMakeUserPresets.json
+.vs/
+.idea/
+*.user
+*.suo
+.DS_Store
+Thumbs.db
+
+# Empty-directory marker is unnecessary once shaders exist
+/shaders/.gitkeep
+
+# Local study notes, verification and auxiliary reports
+/DEFENSE_LAB3.md
+/REQUIREMENTS.md
+/LAB3_CHANGES.diff
+/tests/
+/tools/
+
+# Keep README files local
+README.md
